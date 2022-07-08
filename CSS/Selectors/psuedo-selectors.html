@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Psuedo Selectors - CSS</title>
+	<style>
+		li:first-child{
+			border:  1px solid red;
+		}
+
+		li:nth-child(2){
+			border: 2px solid green;
+		}
+
+		li:nth-child(3){
+			border: 2px solid blue;
+		}
+
+		li:last-child{
+			border: 2px solid yellow;
+		}
+
+		tr:nth-child(even){
+			background-color: #ccc;
+		}
+		tr:nth-child(odd){
+			background-color: orange;
+		}
+
+		/* Example for Psuedo Element selector */
+		li:last-child::after{
+			content: "***";
+		}
+
+		li:nth-child(1)::before{
+			content: "$";
+		}
+
+		td::selection{
+			background-color: orange;
+		}
+
+		p::first-line{
+			background-color: gold;
+		}
+
+		p::first-letter{
+			font-size: 120px;
+		}
+	</style>
+</head>
+<body>
+	<ol>
+		<li>RCB
+			<ul>
+				<li>Kohli</li>
+				<li>Murali</li>
+				<li>Jayachandra</li>
+				<li>Balaram</li>
+				<li>Naresh</li>
+				<li>Krishna</li>
+				<li>Prathap</li>
+				<li>Nagaraj</li>
+				<li>Abhilash</li>
+				<li>Siva Prasad</li>
+			</ul>
+		</li>
+		<li>SRH</li>
+		<li>CSK</li>
+		<li>GT</li>
+		<li>RR</li>
+	</ol>
+
+	<table>
+		<tr>
+			<th>Sno</th>
+			<th>Name</th>
+			<th>Email</th>
+			<th>Phone</th>
+			<th>Status</th>
+		</tr>
+		<tr>
+			<td>1</td>
+			<td>Malathi</td>
+			<td>malathi@gmail.com</td>
+			<td>9876543212</td>
+			<td>Active</td>
+		</tr>
+		<tr>
+			<td>2</td>
+			<td>Malathi 2</td>
+			<td>malathi2@gmail.com</td>
+			<td>9876543212</td>
+			<td>Active</td>
+		</tr>
+		<tr>
+			<td>3</td>
+			<td>Malathi 3</td>
+			<td>malathi3@gmail.com</td>
+			<td>9876543212</td>
+			<td>Active</td>
+		</tr>
+		<tr>
+			<td>4</td>
+			<td>Malathi 4</td>
+			<td>malathi4@gmail.com</td>
+			<td>9876543212</td>
+			<td>Active</td>
+		</tr>
+		<tr>
+			<td>5</td>
+			<td>Malathi 5</td>
+			<td>malathi5@gmail.com</td>
+			<td>9876543212</td>
+			<td>Active</td>
+		</tr>
+	</table>
+	<p>We, AchieversIT are here to assist you in gaining the best deal of knowledge and landing at your dream
+		job.We, AchieversIT are here to assist you in gaining the best deal of knowledge and landing at your dream
+		job.We, AchieversIT are here to assist you in gaining the best deal of knowledge and landing at your dream
+		job.We, AchieversIT are here to assist you in gaining the best deal of knowledge and landing at your dream
+		job.</p>
+</body>
+</html>

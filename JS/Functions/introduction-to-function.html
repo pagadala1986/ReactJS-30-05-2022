@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Introduction to function  - Javascript</title>
+</head>
+<body>
+	<button onclick="redirect()">Click me to redirect to AchieversIT</button>
+
+	<script>
+		//Defination of function
+
+		function redirect(){
+			// window.location.href = "https://www.achieversit.com/";
+
+			// if you want to open link in a new tab
+			window.open("https://www.achieversit.com/");
+		}
+
+		/* Types of functions in javascript 
+
+			- function without params
+			- function with params
+			- function default params
+			- function with return statement
+			- function without name(Anonymous Function)
+			- variable function
+			home work
+			- nested functions
+			- callback function
+			- IIFA/IIFE functions
+
+			- Arrow function(es6)
+		*/
+
+		/* Example for with params */
+
+		function add(a,b){
+			var c = a + b;
+			document.write("<h1>"+c+"</h1>");
+		}
+
+		add(10,20);
+		add('10',20);
+		add(10,'20');
+
+		/* Example for function with default params */
+		function gstCalc(totalAmount,gstP=18){
+			//console.log(arguments);
+			var result = totalAmount + (totalAmount*gstP/100);
+			console.log(result);
+		}
+
+		gstCalc(1000);//
+		gstCalc(1000,10);//1110
+
+		gstCalc();
+
+		gstCalc(1,2,3,4,5,6);
+
+		/* function with return statement*/
+
+		function welcome(){
+			
+			var a,b,c;
+			 a=10,b=30;
+			 c = a + b;
+			 console.log(c);
+			 return "Hi, Welcome to Bangalore";
+
+		}
+
+		console.log(welcome());
+
+		var eveOdd = function(num){
+			debugger;
+			if(num%2==0){
+				return "Even";
+			}else{
+				return "Odd";
+			}
+		}
+
+		document.write(eveOdd());
+		document.write(eveOdd(30));
+
+		/* Arrow functions */
+
+		const multiply = () => {
+			return 4*5;
+		}
+
+		console.log(multiply());
+	</script>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Loops - JS</title>
+</head>
+<body>
+
+<script>
+	/* 
+		Loops  - To execute some statement over a number of time 	
+		
+		Types
+
+			- Entry controlled loops
+				- for loop
+				- while loop
+				- for..in
+
+			- Exit Controlled loops
+				- do...while
+	*/
+
+	for(var i=0;i<10;i++){
+		document.write("<h1>Hi,Welcome to AchieversIT Bangalore</h1>")
+	}
+	var j=0;
+	while(j<10){
+		document.write("<h1>Hi,Welcome to AchieversIT Marathahalli</h1>");
+		j++;
+	}
+
+	var k=20;
+	do{
+		document.write("<h1>Hi,Welcome to AchieversIT Marathahalli Bangalore</h1>");
+		k++;
+	}while(k<10);
+
+	/* Nested Loops */
+
+	for(var i=0;i<5;i++){
+		for(var j=0;j<=i;j++){
+			document.write("<span>*</span>");
+		}
+		document.write("<br />");
+	}
+</script>
+</body>
+</html>

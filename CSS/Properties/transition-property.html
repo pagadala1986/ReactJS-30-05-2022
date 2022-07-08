@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>RWD - CSS</title>
+	<style>
+		section{
+			display: grid;
+			grid-template-columns: repeat(4, 1fr);
+			grid-gap: 10px;
+		}
+		figure{
+			margin: 0;
+		}
+		figure img{
+			width: 100%;
+		}
+
+		@media only screen and (max-width: 475px){
+			section{
+				grid-template-columns: repeat(1, 1fr);
+			}
+		}
+
+		@media only screen and (min-width: 475px) and (max-width: 768px){
+			section{
+				grid-template-columns: repeat(2, 1fr);
+			}
+		}
+
+		/* Examples for 'transition' property */
+		
+		figure{
+			border: 1px solid red;
+			padding: 20px;
+			transition-property: background-color,border-radius;
+			transition-delay: 1s;
+			transition-duration: 3s;
+			transition-timing-function: ease-out;
+		}
+		figure:hover{
+			background-color: black;
+			border-radius: 20px;
+		}
+	</style>
+</head>
+<body>
+	<section>
+		<figure>
+			<img src="../../images/flipcart/black-saree.webp" alt="Black Saree">
+			<figcaption>Black Saree</figcaption>
+		</figure>
+		<figure>
+			<img src="../../images/flipcart/black-saree.webp" alt="Black Saree">
+			<figcaption>Black Saree</figcaption>
+		</figure>
+		<figure>
+			<img src="../../images/flipcart/black-saree.webp" alt="Black Saree">
+			<figcaption>Black Saree</figcaption>
+		</figure>
+		<figure>
+			<img src="../../images/flipcart/black-saree.webp" alt="Black Saree">
+			<figcaption>Black Saree</figcaption>
+		</figure>
+		<figure>
+			<img src="../../images/flipcart/black-saree.webp" alt="Black Saree">
+			<figcaption>Black Saree</figcaption>
+		</figure>
+		<figure>
+			<img src="../../images/flipcart/black-saree.webp" alt="Black Saree">
+			<figcaption>Black Saree</figcaption>
+		</figure>
+		<figure>
+			<img src="../../images/flipcart/black-saree.webp" alt="Black Saree">
+			<figcaption>Black Saree</figcaption>
+		</figure>
+		<figure>
+			<img src="../../images/flipcart/black-saree.webp" alt="Black Saree">
+			<figcaption>Black Saree</figcaption>
+		</figure>
+	</section>
+</body>
+</html>

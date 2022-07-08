@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Relationship Selector - CSS</title>
+	<style>
+		table,th,td{
+			border:  1px solid #ccc;
+		}
+		table{
+			border-collapse: collapse;
+		}
+		th,td{
+			padding: 10px;
+		}
+
+		/* Relationship selectors */
+
+		tbody > tr{
+			background-color: orange;
+		}
+
+		ol  li{
+			border:  2px solid red;
+			margin-bottom: 10px;
+		}
+	</style>
+</head>
+<body>
+	<table>
+		<tr>
+			<th>Sno</th>
+			<th>Name</th>
+			<th>Email</th>
+			<th>Phone</th>
+			<th>Status</th>
+		</tr>
+		<tr>
+			<td>1</td>
+			<td>Malathi</td>
+			<td>malathi@gmail.com</td>
+			<td>9876543212</td>
+			<td>Active</td>
+		</tr>
+		<tr>
+			<td>2</td>
+			<td>Malathi 2</td>
+			<td>malathi2@gmail.com</td>
+			<td>9876543212</td>
+			<td>Active</td>
+		</tr>
+		<tr>
+			<td>3</td>
+			<td>Malathi 3</td>
+			<td>malathi3@gmail.com</td>
+			<td>9876543212</td>
+			<td>Active</td>
+		</tr>
+		<tr>
+			<td>4</td>
+			<td>Malathi 4</td>
+			<td>malathi4@gmail.com</td>
+			<td>9876543212</td>
+			<td>Active</td>
+		</tr>
+		<tr>
+			<td>5</td>
+			<td>Malathi 5</td>
+			<td>malathi5@gmail.com</td>
+			<td>9876543212</td>
+			<td>Active</td>
+		</tr>
+	</table>
+
+	<ol>
+		<li>RCB
+			<ul>
+				<li>Kohli</li>
+				<li>Murali</li>
+				<li>Jayachandra</li>
+				<li>Balaram</li>
+				<li>Naresh</li>
+				<li>Krishna</li>
+				<li>Prathap</li>
+				<li>Nagaraj</li>
+				<li>Abhilash</li>
+				<li>Siva Prasad</li>
+			</ul>
+		</li>
+		<li>SRH</li>
+		<li>CSK</li>
+		<li>GT</li>
+		<li>RR</li>
+	</ol>
+</body>
+</html>

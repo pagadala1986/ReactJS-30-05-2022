@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>square star pattern - JS</title>
+</head>
+<body>
+
+<script>
+	let num = 5;
+	let str = "";
+	//debugger;
+	for(let i=0;i<num;i++){
+		for(let j=0;j<num;j++){
+			if(i===0 || i===num-1){
+				document.write('*');
+			}else{
+				if(j===0 || j===num-1){
+					document.write('*');
+				}
+				document.write("&nbsp;");
+			}
+			
+		}
+		document.write("<br/>");
+	}
+</script>
+</body>
+</html>

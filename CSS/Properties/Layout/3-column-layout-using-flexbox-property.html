@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>3 Columns Layout using Flexbox property</title>
+	<style>
+		section{
+			display: flex;
+		}
+		section div:first-child,
+		section div:last-child{
+			flex: 1;
+		}
+		section div:nth-child(2){
+			flex: 2;
+		}
+		section div{
+			border: 1px solid red;
+			padding: 20px;
+			margin: 5px;
+		}
+	</style>
+</head>
+<body>
+<section>
+	<div>1</div>
+	<div>2</div>
+	<div>3</div>
+	<div>3</div>
+</section>
+</body>
+</html>

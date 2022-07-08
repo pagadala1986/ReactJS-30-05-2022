@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>3 Columns Layout using Flexbox property</title>
+	<style>
+		.box{
+			border: 1px solid red;
+			padding: 20px;
+		}
+		section{
+			display: flex;
+		}
+		section div{
+			flex: 1;
+			margin: 10px;
+		}
+		section div:last-child{
+			margin-right: 0;
+		}
+		section div:first-child{
+			margin-left: 0;
+		}
+		.aitContainer div{
+			display: flex;
+		}
+		.aitContainer div:hover{
+			
+			background: linear-gradient(to right,#2c3e50,#2980b9);
+		}
+		.aitContainer div:nth-child(2):hover{
+			background: linear-gradient(to right,#f7b733,#ff4700);
+		}
+		.aitContainer div h1,
+		.aitContainer div a{
+			flex: 1;
+		}
+		.aitContainer div a{
+			margin-top: 38px;
+			text-align: right;
+		}
+	</style>
+</head>
+<body>
+<section class="box">
+	<div class="box">1</div>
+	<div class="box">2</div>
+	<div class="box">3</div>
+	<div class="box">4</div>
+</section>
+
+<section class="aitContainer">
+	<div >
+		<h1>Become UI Developer</h1>
+		<a href="#">Know More</a>
+	</div>
+	<div>
+		<h1>Become UI Angular Developer</h1>
+		<a href="#">Know More</a>
+	</div>
+	<div>
+		<h1>Become Reactjs Developer</h1>
+		<a href="#">Know More</a>
+	</div>
+</section>
+</body>
+</html>
