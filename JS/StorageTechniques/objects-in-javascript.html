@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Objects in Javascript</title>
+</head>
+<body>
+
+<script>
+	/*
+		What is Object?
+	*/
+
+	// Object Literal
+
+	const product = {
+		name:'Macbook',
+		model:'Air',
+		price: 343434,
+		colors:['black','gray','blue'],
+		quantity:{count:120}
+	}
+
+	// Object constructor
+
+	const order = new Object();
+
+	order.name = 'sample order';
+	order.quantity = 23;
+	order.price = 3333;
+
+	console.log(order);
+
+	// Retrival - Manual
+
+	console.log(product.name);
+
+	console.log(product.colors)
+
+	console.log(product.colors[1])
+
+	// Retrival - using Loop(for..in)
+	for(let item in product){
+		console.log(item);
+		console.log(product[item]);
+		// for(let i=0;i<product[item].length){
+
+		// }
+	}
+
+	function Order(){
+		this.oid = 123;
+		this.oQty = 33;
+		this.oPrice = 4343;
+	}
+
+	/* How to we find the length of object */
+	/* How to fetch no of keys or values from my object */
+	console.log(Object.keys(product));
+	console.log(Object.keys(product).length);
+	console.log(Object.values(product));
+	console.log(Object.values(product).length);
+
+	/* Retrival - using Loop(for..loop) */
+	for(let i=0;i<Object.keys(product).length;i++){
+		console.log(product['name'])
+	}
+
+	/* How to assign new key:value to object */
+
+	Object.assign(product,{'ratings':10000},{'reviews':43434});
+
+	console.log(product)
+
+	delete product.reviews;
+
+	console.log(product)
+
+	console.log(typeof product);
+</script>
+</body>
+</html>

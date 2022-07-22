@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Event Bubling - JS</title>
+	<style>
+		div{
+			border:  1px solid red;
+			padding: 20px;
+		}
+	</style>
+</head>
+<body>
+		<div id="first">1
+			<div id="second">2
+				<div id='third'>3</div>
+			</div>
+		</div>
+
+		<div class="container">
+		  <button class="btn">Click me</button>
+		</div>
+
+		<a href="https://www.achierversit.com" id="ait">AchieversIT</a>
+
+<script>
+	document.getElementById('third').addEventListener('click',function(e){
+		e.stopImmediatePropagation();
+		alert('Div3 is clicked');
+	})
+	document.getElementById('second').addEventListener('click',function(e){
+		e.stopPropagation();
+		alert('Div2 is clicked');
+	})
+	document.getElementById('first').addEventListener('click',function(e){
+		alert('Div1 is clicked');
+	})
+
+	document.getElementById('third').addEventListener('mouseover',function(e){
+		e.stopImmediatePropagation()
+		alert('Div3 is mouseover');
+	})
+
+
+	const container = document.querySelector(".container");
+	container.addEventListener("click", function(e) {
+		console.log("container click", e);
+	});
+	const btn = document.querySelector(".btn");
+	btn.addEventListener("click", function(e) {
+		e.stopImmediatePropagation();
+		console.log("btn click", e);
+	});
+
+	btn.addEventListener("click", function(e) {
+	
+	  console.log("btn click 2", e);
+	});
+	btn.addEventListener("click", function(e) {
+	  
+	  console.log("btn click 3", e);
+	});
+
+	document.getElementById('ait').addEventListener('click',function(e){
+		e.preventDefault();
+	})
+</script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Blur Event Example in Javascript</title>
+</head>
+<body>
+	<form>
+		<input type="text" name="username" id="uname" autofocus placeholder="Enter username" onblur="validateInput(this)" />
+		<input type="password" name="password" placeholder="Enter Password" onblur="validateInput(this)">
+		<input type="submit">
+	</form>
+
+	<script>
+		var validateInput = (target) =>{
+			//console.log(target)
+			if(target.value==""){
+				alert("Please enter "+target.name);
+			}
+		}
+	</script>
+</body>
+</html>

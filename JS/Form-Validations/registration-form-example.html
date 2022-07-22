@@ -42,12 +42,14 @@
                   </div>
                </div>
             </div>
+            <span class="hide" id="gErr">Please select gender</span>
             <div class="input_field radio_option">
                <input type="radio" name="radiogroup1" id="rd1">
                <label for="rd1">Male</label>
                <input type="radio" name="radiogroup1" id="rd2">
                <label for="rd2">Female</label>
             </div>
+
             <div class="input_field select_option">
                <select>
                   <option>Select a country</option>
@@ -72,12 +74,20 @@
 <script src="https://use.fontawesome.com/4ecc3dbb0b.js"></script>
 <script>
     function validateForm(e){
-        e.preventDefault();
+      //e.preventDefault();
 
-        var email = document.getElementById('email').value;
-        if(email==""){
-            document.getElementById('eErr').style.display = "Block";
-        }
+      var email = document.getElementById('email').value;
+      if(email==""){
+         document.getElementById('eErr').style.display = "block";
+      }
+      
+      var radio = document.querySelector('input[name="radiogroup1"]:checked');
+
+      if(radio!='null'){
+         document.getElementById('gErr').style.display = "block";
+      }
+
+
     }
 </script>
 </body>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Strings and string Methods - Javascript</title>
+</head>
+<body>
+
+<script>
+	/* String literal */
+	let course = 'ReactJs training program';
+	let duration = "4months";
+
+	// String Constructor
+
+	let place_of_training = new String("online/offline marathalli");
+
+	//how to present dat into page
+
+	document.write("<h1>"+course+"</h1>");
+	document.write("<h1>"+duration+"</h1>");
+	document.write("<h1>"+place_of_training+"</h1>");
+
+
+	/* String methods(pre-defined)
+
+	The following methods are predefined methods for String handling
+
+		- indexOf() - returns index of first occurance of given character
+		- lastIndexOf()
+		- charAt()
+		- charCodeAt()
+		- substr()
+		- substring()
+		- toUpperCase()
+		- toLowerCase()
+		- split()
+		- replace()
+		- trim()
+		- concat()
+	*/
+
+	/* Example for indexOf() */
+
+	console.log(course.indexOf('r'))
+	console.log(course.lastIndexOf('r'))
+	console.log(course.charAt(5))
+	console.log(course.charCodeAt(5))
+	console.log(course.substr(2,6))
+	console.log(course.substring(2,6))
+	console.log(course.toUpperCase())
+	console.log(course.toLowerCase())
+</script>
+</body>
+</html>

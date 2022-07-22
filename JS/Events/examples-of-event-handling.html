@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Events - Javascript</title>
+</head>
+<body>
+	<!-- <a href="https://www.achieversit.com" target="_blank">
+		<img src="../../images/logo.png" alt="AchieversIT Logo">
+	</a> -->	
+
+	<!-- how to redirect to an external page using javascript events -->
+	<h1>Inline event handling</h1>
+	<img src="../../images/logo.png" alt="AchieversIT Logo" onclick="redirect()">
+
+	<h1>Internal event handling</h1>
+	<img src="../../images/logo.png" alt="AchieversIT Logo" id="ait">
+
+
+	<script>
+		function redirect(){
+			//handling event logic we must place here
+			//window.location.href = "https://www.achieversit.com";
+			//to open in new tab or window
+
+			window.open("https://www.achieversit.com");
+		}
+
+		document.getElementById('ait').addEventListener('click',function(){
+			window.open("https://www.achieversit.com");
+		});
+
+		/* exmple for context menu */
+
+		document.getElementById('ait').addEventListener('contextMenu',function(event){
+			event.preventDefault();
+			console.log(event);
+		});
+	</script>
+</body>
+</html>

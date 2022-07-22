@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Arrays & Array Methods - Javascript</title>
+	<style>
+		div ul{
+			display: grid;
+			grid-template-columns: repeat(3, 1fr);
+			grid-gap: 10px;
+		}
+		li{
+			list-style: none;
+			font-size: 30px;
+			border:  1px solid #ccc;
+			border-radius: 10px;
+			padding: 20px;
+			background: linear-gradient(orange,white,green);
+		}
+		h1{
+			border: 1px solid darkred;
+			padding: 10px;
+			border-radius: 10px;
+			margin-bottom: 10px;
+			background-color: #ccc;
+		}
+	</style>
+</head>
+<body>
+<h1>List of Famous Cricketers</h1>
+<div id="container">
+	
+</div>
+<h1>List of Famous languages</h1>
+
+<div id="anothercontainer">
+	
+</div>
+<h1>List of Famous Actors</h1>
+<div id="actorcontainer">
+	
+</div>
+<script>
+	//Array Literal
+	var cricketers = ['Sachin','Sourav','Dravid','Sehwag','Dhoni','Virat'];
+
+	//Array Constructor
+	var courses = new Array('HTML','CSS','JS');
+
+	// manupulate an array
+	cricketers.push('Gambhir','Rohit','Vijaya','Murali');
+	cricketers.pop();
+
+	cricketers.unshift('murali','Kapildev','Sunil Gavaskar');
+
+	cricketers.shift();
+
+	
+
+	// Retrival from an array
+
+	// Manual way
+
+	console.log(cricketers[0]);
+	console.log(cricketers[3]);
+	console.log(cricketers[5]);
+	//console.log(cricketers[15]);
+
+	// loops
+	let result="<ul>";
+	for(let i=0;i<cricketers.length;i++){
+		console.log(cricketers[i]);
+		result += "<li>"+cricketers[i]+"</li>";
+	}
+
+	result +="</ul>";
+
+	console.log(result);
+
+	document.getElementById('container').innerHTML = result;
+
+	// extraction
+	var newArr = ["html","css","js","reactjs","angular","python","nodejs","Java","mysql"].slice(3,6);
+	let result1="<ul>";
+	for(let i=0;i<newArr.length;i++){
+		console.log(newArr[i]);
+		result1 += "<li>"+newArr[i]+"</li>";
+	}
+
+	result1 +="</ul>";
+
+	document.getElementById('anothercontainer').innerHTML = result1;
+
+	var actors = ['Alibhat','Anupama','Samantha','Anushka','Tamanna','Chiranjeevi','Balayya'];
+
+	/* Example for splice() */
+
+	actors.splice(2,0,'Amir','Samir','Kamir');
+
+	actors.splice(3,2,'Suresh','Naresh');
+
+	actors.splice(2);
+
+	let resultActors="<ul>";
+	for(let i=0;i<actors.length;i++){
+		resultActors += "<li>"+actors[i]+"</li>";
+	}
+
+	resultActors +="</ul>";
+
+	document.getElementById('actorcontainer').innerHTML = resultActors;
+
+
+console.log(typeof actors)
+
+</script>
+</body>
+</html>

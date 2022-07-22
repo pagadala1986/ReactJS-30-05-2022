@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Encapsultaion in Javascript</title>
+</head>
+<body>
+
+<script>
+	// object literal
+	var User = {
+		name:"murali",
+		email:"murali@gmail.com",
+		password:'murali@123',
+		register: function(){
+			console.log(this.name);
+		},
+		login: function(){
+			this.register();
+		},
+		changePassword: function(){
+
+		},
+		changeProfilePicture: function(){
+
+		},
+		forgotPassword:function(){
+
+		}
+
+	}
+
+	// calling method outside of class
+
+	//user.register();
+	console.log(User.name);
+	User.login();
+
+	// Object constructor
+
+	function Product(a,b,c){
+		this.name = a;
+		this.model = b;
+		this.price = c;
+		this.pDetails = function(){
+			return "products details";
+		}
+		this.editProduct = function(){
+			return "Edit product logic";
+		}
+		this.deleteProduct = function (){
+			return "delete product logic";
+		}
+	}
+
+	//accessing properties and methods outside
+
+	// i must createa an instance
+
+	var pObj1 = new Product('Macbook','Air1002',4343);
+	console.log(pObj1.name);
+
+
+	var pObj2 = new Product('Dell','Dell001',6565);
+	console.log(pObj2.name);
+
+
+	var pObj3 = new Product('Acer','a0023',32223);
+	console.log(pObj3.name);
+
+
+	// Example for object construtor
+
+	function Car(name,year) {
+		this.name = name;
+		this.year = year;
+		this.age = function () {
+			let date = new Date();
+			return date.getFullYear() - this.year;
+		}
+	}
+
+	var cObj = new Car("Ford", 2021);
+
+	console.log(cObj.age())
+
+	// Object constructor  -  One more Example
+
+	function Payment(totalAmout,gp){
+		this.gstPercentage = gp;
+		this.totalAmount = totalAmout;
+
+		this.priceInclusiveOfGst = function(){
+			return this.totalAmount+(this.totalAmount*this.gstPercentage/100);
+		}
+
+		this.priceExclusiveOfGst = function(){
+			return this.totalAmount;
+		}
+
+		this.priceOffer = function(oP=10){
+			var amount = this.priceInclusiveOfGst();
+
+			return amount - (amount*oP/100);
+		}
+		// this.emi = function(){
+
+		// }
+	}
+
+	Payment.prototype.emi = function(nm){
+		var amount = this.priceInclusiveOfGst();
+
+		return amount/nm;
+	}
+
+	// how to access members of class outside
+	var paymentObj = new Payment(1000.6,20);
+
+	document.write('<h1>'+paymentObj.priceInclusiveOfGst()+'</h1>');
+	document.write('<h1>'+paymentObj.priceOffer(50)+'</h1>');
+	document.write('<h1>'+paymentObj.priceOffer(100)+'</h1>');
+	document.write('<h1>'+paymentObj.priceOffer()+'</h1>');
+	console.log(paymentObj.emi(12));
+	document.write('<h1>'+Math.abs(paymentObj.emi(12))+'</h1>');
+</script>
+</body>
+</html>
